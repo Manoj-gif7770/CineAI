@@ -29,7 +29,7 @@ function App() {
       draw();
     };
 
-    // 🔥 MULTI PERSON DETECTION
+
     const detect = async () => {
       if (
         modelRef.current &&
@@ -38,7 +38,7 @@ function App() {
       ) {
         const preds = await modelRef.current.detect(videoRef.current);
 
-        // 🔥 FILTER ONLY PEOPLE
+
         objectsRef.current = preds
           .filter((p) => p.class === "person")
           .map((p) => ({
@@ -51,7 +51,7 @@ function App() {
       requestAnimationFrame(detect);
     };
 
-    // 🎬 MULTI FOCUS DRAW
+
     const draw = () => {
       const video = videoRef.current;
       const canvas = canvasRef.current;
@@ -64,11 +64,11 @@ function App() {
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // 🎬 BLUR FULL BACKGROUND
+
       ctx.filter = "blur(25px)";
       ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-      // 🎯 CLEAR MULTIPLE FOCUS AREAS
+
       ctx.save();
 
       objectsRef.current.forEach((obj) => {
@@ -84,7 +84,7 @@ function App() {
 
       ctx.restore();
 
-      // 🔴 DRAW FOCUS UI
+      //  DRAW FOCUS UI
       objectsRef.current.forEach((obj) => {
         ctx.beginPath();
         ctx.arc(obj.x, obj.y, 130, 0, Math.PI * 2);
@@ -101,7 +101,7 @@ function App() {
     return () => cancelAnimationFrame(animationId);
   }, []);
 
-  // 🎥 RECORDING
+  //  RECORDING
   const startRecording = () => {
     const stream = canvasRef.current.captureStream(30);
     mediaRecorderRef.current = new MediaRecorder(stream);
