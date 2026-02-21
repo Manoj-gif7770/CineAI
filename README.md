@@ -34,14 +34,10 @@ CineAI is an AI-powered cinematic camera system that automatically detects, trac
 
 The CineAI Android app allows users to use cinematic AI camera features directly on mobile devices.
 
-## Screenshots
-
-(Add screenshots here later)
-
 
 ##  Demo Video
 
-(Add demo video link here)
+[(Add demo video link here)](https://drive.google.com/file/d/1E2s9MNSznLUA2CKEbJwgxjgVGeBjJ2PF/view?usp=drivesdk)
 
 
 ##  Architecture
