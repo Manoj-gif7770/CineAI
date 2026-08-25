@@ -6,7 +6,6 @@ CineAI is an AI-powered cinematic camera system that automatically detects, trac
 ##  Live Demo
 
  https://cineai-2a2b9.web.app
- http://localhost:3006/
 
 
 ##  Features
